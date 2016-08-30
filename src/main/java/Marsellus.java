@@ -1,7 +1,4 @@
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 /**
  * Created by HP on 28.08.2016.
@@ -54,6 +51,11 @@ public class Marsellus {
         float vatPrc;
         int prodTime;
         float tollPrc;
+    }
+
+    private class Container
+    {
+        private List<Container> contMap = new ArrayList<Container>();
     }
 
     private class Dimension
