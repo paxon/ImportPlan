@@ -1,3 +1,5 @@
+package Marsellus;
+
 import java.util.*;
 
 /**
@@ -7,8 +9,8 @@ public class Marsellus {
 
     public static void main(String[] args)
     {
-        System.out.println("Hello world!");
         Wallace marcellus = new Wallace();
+
     }
 
     public static class Wallace
@@ -18,32 +20,9 @@ public class Marsellus {
         public static float volProcCost;
     }
 
-    public class Customer
-    {
-        int id;
-        String name;
-        int pmtDelay;
-        float factRate;
-        float unitProcCost;
 
-    }
 
-    public class Item
-    {
-        int id;
-        String model;
-        float malfRate;
-        Dimension unitDim;
-        float unitsPerMBox;
-        Dimension mboxDim;
-        String vendor;
-        ItemGroup itemGroup;
 
-        public float getPieceVol()
-        {
-            return 0.01f;
-        }
-    }
 
     public class ItemGroup
     {
@@ -58,33 +37,14 @@ public class Marsellus {
         private List<Container> contMap = new ArrayList<Container>();
     }
 
-    private class Dimension
+    public class Dimension
     {
         float width;
         float length;
         float height;
     }
 
-    public class Deal
-    {
-        Customer customer;
-        Item item;
-        float qty;
-        float price;
-        float cost;
 
-
-        public double getEstimatedProfit()
-        {
-            float vatFactor = 1+this.item.itemGroup.vatPrc;
-            float moneyCost = Wallace.adjLocalRate*this.customer.pmtDelay-this.customer.factRate;
-            float procsCost = this.customer.unitProcCost + Wallace.volProcCost;
-
-            return qty*(price/(vatFactor)*(1-moneyCost)-cost/(vatFactor)-procsCost);
-        }
-
-
-    }
 
 
     /**
