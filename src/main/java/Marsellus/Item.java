@@ -5,17 +5,22 @@ package Marsellus;
  */
 public class Item
 {
-    int id;
-    String model;
-    float malfRate;
-    Marsellus.Dimension unitDim;
-    float unitsPerMBox;
-    Marsellus.Dimension mboxDim;
-    String vendor;
-    Marsellus.ItemGroup itemGroup;
+    private long idItem;
+    private String sku;
+    private String model;
+    private long itemGroup;
+    private float malfRate;
+    private float unitW;
+    private float unitL;
+    private float unitH;
+    private int pcsMbox;
+    private float mboxW;
+    private float mboxL;
+    private float mboxH;
+    private int mboxPplt;
 
     public float getPieceVol()
     {
-        return 0.01f;
+        return unitW*unitL*unitH;
     }
 }

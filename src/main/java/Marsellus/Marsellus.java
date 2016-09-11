@@ -1,5 +1,6 @@
 package Marsellus;
 
+import javax.swing.*;
 import java.util.*;
 
 /**
@@ -20,6 +21,9 @@ public class Marsellus {
     public static void main(String[] args)
     {
         Wallace marcellus = new Wallace();
+
+        JFrame mainForm = new JFrame();
+
 
     }
 
@@ -76,7 +80,7 @@ public class Marsellus {
         return 0;
     }
 
-    public static void stockBusynessCount(HashSet<Deal> deals, HashMap<Date,Float> busySched)
+    public static void stockBusynessCount(HashSet<Order> deals, HashMap<Date,Float> busySched)
     {
 
     }
